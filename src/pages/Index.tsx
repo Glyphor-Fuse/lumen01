@@ -1,34 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
-
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { FilmStripLayout } from "@/components/FilmStripLayout";
+import { Hero } from "@/components/Hero";
+import { Manifesto } from "@/components/Manifesto";
+import { TechAgenda } from "@/components/TechAgenda";
+import { Speakers } from "@/components/Speakers";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-background p-4">
-      {/* This is a placeholder page. 
-        It demonstrates how to use "shadcn-ui" components and Tailwind CSS.
-        The AI interprets these imports as available UI primitives.
-      */}
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-center">Welcome to Your Project</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="text-center text-muted-foreground">
-            Start building your application by editing <code className="bg-muted px-1 rounded">src/pages/Index.tsx</code>
-          </p>
-          
-          <div className="space-y-2">
-            <Input placeholder="Enter your project name..." />
-            <Button className="w-full">
-              Create Something Amazing
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+    <FilmStripLayout>
+      <Hero />
+      <Manifesto />
+      <TechAgenda />
+      <Speakers />
+      
+      {/* Footer / Credits */}
+      <footer className="py-20 text-center font-mono text-xs text-neutral-600 border-t border-neutral-900 mt-20">
+        <p>LUMEN:01 // CONF_ID_9923 // DO NOT DISTRIBUTE</p>
+        <p className="mt-2">© 2024 GLYPHOR PRODUCTIONS</p>
+      </footer>
+    </FilmStripLayout>
   );
 };
 
